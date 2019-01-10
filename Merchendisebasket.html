@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/merchendise.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/basket.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset="utf-8" />
+    <title>Merchendise</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Main</a></li>
+            <li><a href="Merchendise.html">Merchendise</a></li>
+            <li><a href="TourDates.html">Tour Dates</a></li>
+            <li><a href="Music.html">Music</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><img id="checkout" src="assets/basketcheckout.png" style="display:none" /><span id="checkoutcounter"></span></li>
+        </ul>
+    </nav>
+    <div id="container" class="container1">
+        <div class="purchaseimage" name="cat1">
+            <img id="product1" src="assets/hoodie1.jpg" class="purchaseimg">
+        </div>
+
+        <div class="purchaseimage" name="cat1">
+            <img id="product2" src="assets/hoodie2.jpg" class="purchaseimg">
+        </div>
+
+        <div class="purchaseimage" name="cat1">
+            <img id="product3" src="assets/hoodie3.jpg" class="purchaseimg">
+        </div>
+        <div class="purchaseimage" name="cat2">
+            <img id="product4" src="assets/tshirt1.png" class="purchaseimg">
+        </div>
+        <div class="purchaseimage" name="cat2">
+            <img id="product5" src="assets/tshirt2.jpg" class="purchaseimg">
+        </div>
+        <div class="purchaseimage" name="cat2">
+            <img id="product6" src="assets/tshirt3.png" class="purchaseimg">
+        </div>
+        <div class="purchaseimage" name="cat3">
+            <img id="product7" src="assets/poster1.jpg" class="purchaseimg">
+        </div>
+        <div class="purchaseimage" name="cat3">
+            <img id="product8" src="assets/poster2.jpg" class="purchaseimg">
+        </div>
+        <div class="purchaseimage" name="cat3">
+            <img id="product9" src="assets/poster3.jpg" class="purchaseimg">
+        </div>
+    </div>
+    <div id="button9">
+        <a href="Index.html"><input type="button" class="buynow" value="Buy Now!" onclick="deleteCookie('basket'); buyalert();"/></a>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {       
+            basketopen();         
+            loadimages();
+        });
+    </script>
+</body>
+</html>

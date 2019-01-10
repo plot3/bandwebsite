@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url(http://blog.hostbaby.com/wp-content/uploads/2013/07/scuffedstatic_dark_1920x1234.jpg);
+}
+nav {
+    width: 100vw;
+    background: #808080;
+    text-align: center;
+    margin: 0;
+    
+}
+ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+    float: none;
+}
+    ul li:hover {
+        background: #A0A0A0;
+    }
+ul li a{
+    color:azure;
+    text-decoration: none;
+    font-size: 12px;
+}
+.container{
+    padding-top: 4em;
+}
+.imagecontainer{
+}
+.textimage1{
+    border: 2px solid #ffffff;
+    position: absolute;
+    top: 20vh;
+    right: 5vw;
+    width:30%;
+}
+.textimage2 {
+    border: 2px solid #ffffff;
+    position: absolute;
+    top: 60vh;
+    right: 5vw;
+    width: 30%;
+}
+.txtcontainer {
+    margin: 5vw;
+    width: 50vw;
+}
+p {
+    font: arial, georgia;
+    color: antiquewhite;
+}
+h1{
+    color:aliceblue;
+}
+.albums{
+    padding-top: 10vh;
+    padding-left: 10vw;
+}
+.spotifyplayer {
+}
+
+iframe {
+    width: 900px;
+    height: 450px;
+    border: none;
+    position: relative;
+    padding-left: 26%;
+    padding-top: 3%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: none;
+    padding: 8px;
+    background-color: none;
+    opacity: 0.8;
+}
+
+tr :hover {
+    background-color: #373F51;
+}
+
+.table {
+    position: relative;
+    padding-top: 12vh;
+    padding-left: 35vw;
+    align-content: center;
+    opacity: 0.8;
+    width: 60vw;
+    font-family: Asap, sans-serif;
+    color:aliceblue;
+}
+
+caption {
+    background-color: #888888;
+    opacity: 0.6;
+}
+
+.layerimg {
+    position: absolute;
+    top: 14vh;
+    left: 24vw;
+}
+
+#layer1 {
+    z-index: -1;
+}
+.album {
+    display: inline-block;
+    padding: 7px;
+    transition-property: background;
+    transition-duration: 2s;
+}
+.album:hover {
+    background: black;
+}
+.webpictures {
+    text-align: center;
+    margin:30px;
+}
+
+
+

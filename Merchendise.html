@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/merchendise.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/basket.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset="utf-8" />
+    <title>Merchendise</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Main</a></li>
+            <li><a href="Merchendise.html">Merchendise</a></li>
+            <li><a href="TourDates.html">Tour Dates</a></li>
+            <li><a href="Music.html">Music</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><a href="Merchendisebasket.html"><img id="checkout" src="assets/basketcheckout.png" style="display:none" /><span id="checkoutcounter"></span></a></li>
+        </ul>
+    </nav>
+
+    <div class="merchendisepage">
+        <div id="cat1" class="navbuttons"><img src="assets/hoodie.png" class="navimages" />Hoodies</div>
+        <div id="cat2" class="navbuttons"><img src="assets/Tshirt.png" class="navimages" />T-Shirts</div>
+        <div id="cat3" class="navbuttons"><img src="assets/posters.png" class="navimages" />Posters</div>
+
+        <div id="panelm" style="display:none" class="bigimagediv">
+            <div class="bigboiimage">
+                <div style="clear:both;">
+
+                    <img id="panelmclosebutton"src="assets/closebutton.png"style="float:right;"class="closebutton" />
+                    <img id="basketbutton"src="assets/basket.png" class="basket1" />
+                </div>
+                <div class="mySlides" name="cat1">
+                    <img id="product1" src="assets/hoodie1.jpg"class="bigimage">
+                </div>
+
+                <div class="mySlides" name="cat1">
+                    <img id="product2" src="assets/hoodie2.jpg" class="bigimage">
+                </div>
+
+                <div class="mySlides" name="cat1">
+                    <img id="product3" src="assets/hoodie3.jpg" class="bigimage">
+                </div>
+                <div class="mySlides" name="cat2">
+                    <img id="product4" src="assets/tshirt1.png" class="bigimage">
+                </div>
+                <div class="mySlides" name="cat2">
+                    <img id="product5" src="assets/tshirt2.jpg" class="bigimage">
+                </div>
+                <div class="mySlides" name="cat2">
+                    <img id="product6" src="assets/tshirt3.png" class="bigimage">
+                </div>
+                <div class="mySlides" name="cat3">
+                    <img id="product7" src="assets/poster1.jpg" class="bigimage">
+                </div>
+                <div class="mySlides" name="cat3">
+                    <img id="product8" src="assets/poster2.jpg" class="bigimage">
+                </div>
+                <div class="mySlides" name="cat3">
+                    <img id="product9" src="assets/poster3.jpg" class="bigimage">
+                </div>
+                <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="right" onclick="plusDivs(1)">&#10095;</button>
+                <input type="button" class="clearbasket" value="Clear Basket" onclick="deleteCookie('basket'); basketdisplay();" />
+
+            </div>
+            <input id="selectedproduct" type="hidden" value="" />
+        </div>
+
+    </div>
+    <!--<div class="">
+        <div class="">
+            <img src="assets/gallery1.jpg" style="width:100%;" />
+        </div>
+
+        <div class="item">
+            <img src="assets/gallery2.jpg" style="width:100%;" class="images">
+        </div>
+
+        <div class="item">
+            <img src="assets/gallery3.jpg" style="width:100%;" class="images">
+        </div>
+    </div>-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            basketdisplay();
+            $(".navbuttons").click(function () {
+                $(".navbuttons").hide();
+                $(this).show();
+                var myid = $(this).attr('id');
+                $(".mySlides").hide().removeClass("mySlides");
+                $('[name="' + myid + '"]').addClass("mySlides");
+                $('[name="' + myid + '"]').first().show();                
+                $("#panelm").show();
+
+                var selproduct = $('[name="' + myid + '"]').first().children().filter('img').first().attr('id');
+                $("#selectedproduct").val(selproduct);
+                //alert(selproduct);
+            });
+            $("#panelmclosebutton").click(function () {
+                $("#panelm").hide();
+                $(".navbuttons").show();
+            });
+            $("#basketbutton").click(function () {
+                var selproduct = $('#selectedproduct').val();
+                var currentbasket = getCookie("basket");
+                if (currentbasket == null || currentbasket == "") {
+                    setCookie("basket", selproduct, 2);
+                }
+                else {
+                    selproduct = selproduct.concat('|');
+                    setCookie("basket",selproduct.concat(currentbasket), 2);
+                }
+                basketdisplay();
+
+
+                //alert(selproduct);
+
+            });
+            $("#checkout").click(function () {
+                //$("#panelm").show();
+                //$(".navbuttons").hide();
+                //$(".mySlides").hide();
+                //$("#panelmclosebutton").hide();
+                //$("#basketbutton").hide();
+                //$(".arrows").hide();
+                //$(".clearbasket").hide();
+                //var currentbasket = getCookie("basket");
+                //var basketarray = currentbasket.split("|");
+                //var i;
+                //for (i = 0; i < basketarray.length; i++) {
+                //    $("#" + basketarray[i]).parent().show();
+                //    text += cars[i] + "<br>";
+                //}
+
+            });
+            //$(".bigimage").mouseover(function () {
+            //    $("#basketbutton").show();
+            //});
+            //$(".bigimage").mouseout(function () {
+            //    $("#basketbutton").hide();
+            //});
+            //$("")
+        });
+    </script>
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+        var selproduct = $(x[slideIndex - 1]).children().filter('img').first().attr('id');
+        $('#selectedproduct').val(selproduct);
+        //alert(selproduct);
+    }
+    </script>
+
+</body>
+</html>

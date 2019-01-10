@@ -1,0 +1,102 @@
+﻿.navbuttons{
+    width: 20vh;
+    height: 20vw;
+    display:inline-block;
+    margin: 50px;
+    vertical-align: middle;
+}
+.merchendisepage{
+    text-align: center;
+    color:aliceblue;
+    padding-top: 23vh;
+}
+.navimages{
+    width: 20vh;
+    background-color:aliceblue;
+    display:inline-block;
+    border-radius: 40px;
+}
+.bigimagediv {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+.bigimage {
+    width: 20vw;
+    vertical-align: middle;
+    border-radius:10px;
+}
+.closebutton:hover{
+    cursor:pointer;
+}
+.navimages:hover{
+    cursor:pointer;
+}
+.basketdiv{
+    margin:0;
+    margin-left:20px;
+    padding:0;
+    border:0;
+    width: 64px;
+    z-index: 10;    
+    position:relative;
+    top:200px;
+    background-color:white;
+    cursor:pointer;
+}
+.basketbutton:hover{
+    /*cursor:pointer;*/
+}
+.purchaseimage{
+    text-align:center;
+    display:inline-block;
+}
+.purchaseimg{
+    height:21vh;
+    text-align:center;
+}
+.container1{
+    padding-top:30vh;
+    text-align: center;
+}
+.left,.right {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border:none;
+    background-color:#888888;
+}
+.right {
+    right: 0;
+    border:none;
+}
+.left {
+    left: 0;
+}
+.bigboiimage{
+    position:relative;
+    padding-bottom:16vh;
+}
+.clearbasket{
+
+}
+.basket1 {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    opacity:0.8;
+    right:0;
+    padding-top:18vh;
+}
+#button9{
+    text-align:center;
+}
